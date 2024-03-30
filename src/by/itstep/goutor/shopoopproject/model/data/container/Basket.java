@@ -9,11 +9,18 @@ public class Basket {
     private Orange[] oranges;
     private Milk[] milks;
     private Bread[] breads;
+    private int sizeMilk = 0;
+    private int sizeOrange = 0;
+    private int sizeBread = 0;
+
 
     public Basket() {
         oranges = new Orange[DEFAULT_SIZE];
+        sizeOrange = oranges.length;
         milks = new Milk[DEFAULT_SIZE];
+        sizeMilk = milks.length;
         breads = new Bread[DEFAULT_SIZE];
+        sizeBread = breads.length;
     }
 
     public Basket(Orange[] oranges, Milk[] milks, Bread[] breads) {
@@ -44,5 +51,17 @@ public class Basket {
 
     public void setBreads(Bread[] breads) {
         this.breads = breads;
+    }
+
+    public int getSizeMilk() {
+        return sizeMilk;
+    }
+
+    public int getSizeOrange() {
+        return sizeOrange;
+    }
+
+    public int getSizeBread() {
+        return sizeBread;
     }
 }
