@@ -1,8 +1,6 @@
 package by.itstep.goutor.shopoopproject.model.logic;
 
-import by.itstep.goutor.shopoopproject.model.data.Bread;
-import by.itstep.goutor.shopoopproject.model.data.Milk;
-import by.itstep.goutor.shopoopproject.model.data.Orange;
+import by.itstep.goutor.shopoopproject.model.data.*;
 import by.itstep.goutor.shopoopproject.model.data.container.Basket;
 import org.junit.Test;
 
@@ -11,13 +9,13 @@ import static org.junit.Assert.*;
 public class ShopAssistanceTest {
     @Test
     public void testCalculateTotalPricePositive() {
-        Milk[] milks = {new Milk(1000, 3.5, 2)};
-        Bread[] breads = {new Bread("Black", "first", 1.5)};
-        Orange[] oranges = {new Orange(100, 3000, 0.5)};
+        Product[] products = {new Milk(1000, 3.5, 2),
+                new Bread("Black", "first", 1.5),
+                new Orange(100, 3000, 0.5)};
 
-        Basket basket = new Basket(oranges, milks, breads);
+        Basket basket = new Basket(products);
 
-        double expected = 4;
+        double expected = 4.0;
 
 
         double actual = ShopAssistance.calculateTotalPrice(basket);

@@ -3,65 +3,38 @@ package by.itstep.goutor.shopoopproject.model.data.container;
 import by.itstep.goutor.shopoopproject.model.data.Bread;
 import by.itstep.goutor.shopoopproject.model.data.Milk;
 import by.itstep.goutor.shopoopproject.model.data.Orange;
+import by.itstep.goutor.shopoopproject.model.data.Product;
 
 public class Basket {
     public static final int DEFAULT_SIZE = 10;
-    private Orange[] oranges;
-    private Milk[] milks;
-    private Bread[] breads;
-    private int sizeMilk = 0;
-    private int sizeOrange = 0;
-    private int sizeBread = 0;
+    private Product[] products;
+
+
+    private int size = 0;
 
 
     public Basket() {
-        oranges = new Orange[DEFAULT_SIZE];
-        sizeOrange = oranges.length;
-        milks = new Milk[DEFAULT_SIZE];
-        sizeMilk = milks.length;
-        breads = new Bread[DEFAULT_SIZE];
-        sizeBread = breads.length;
+        products = new Product[DEFAULT_SIZE];
     }
 
-    public Basket(Orange[] oranges, Milk[] milks, Bread[] breads) {
-        this.oranges = oranges;
-        this.milks = milks;
-        this.breads = breads;
+    public Basket(Product[] products) {
+        this.products = products;
+        size = products.length;
     }
 
-    public Orange[] getOranges() {
-        return oranges;
+    public Product[] getProducts() {
+        return products;
     }
 
-    public Milk[] getMilks() {
-        return milks;
+    public void setProducts(Product[] products) {
+        this.products = products;
     }
 
-    public Bread[] getBreads() {
-        return breads;
+    public int getSize() {
+        return size;
     }
 
-    public void setOranges(Orange[] oranges) {
-        this.oranges = oranges;
-    }
-
-    public void setMilks(Milk[] milks) {
-        this.milks = milks;
-    }
-
-    public void setBreads(Bread[] breads) {
-        this.breads = breads;
-    }
-
-    public int getSizeMilk() {
-        return sizeMilk;
-    }
-
-    public int getSizeOrange() {
-        return sizeOrange;
-    }
-
-    public int getSizeBread() {
-        return sizeBread;
+    public void setSize(int size) {
+        this.size = size;
     }
 }

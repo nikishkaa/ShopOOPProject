@@ -1,17 +1,16 @@
 package by.itstep.goutor.shopoopproject.model.data;
 
-public class Milk {
+public class Milk extends Product {
     private double volume;
     private double fat;
-    private double price;
 
     public Milk() {
     }
 
     public Milk(double volume, double fat, double price) {
+        super(price);
         this.volume = volume;
         this.fat = fat;
-        this.price = price;
     }
 
     public double getVolume() {
@@ -22,9 +21,6 @@ public class Milk {
         return fat;
     }
 
-    public double getPrice() {
-        return price;
-    }
 
     public void setVolume(double volume) {
         this.volume = volume;
@@ -34,7 +30,12 @@ public class Milk {
         this.fat = fat;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    @Override
+    public String toString() {
+        return "Milk{" +
+                "volume = " + volume +
+                ", fat = " + fat +
+                ", " + super.toString() +
+                '}';
     }
 }
