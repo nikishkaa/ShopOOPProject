@@ -11,11 +11,12 @@ public class ShopAssistanceTest {
     public void testCalculateTotalPricePositive() {
         Product[] products = {new Milk(1000, 3.5, 2),
                 new Bread("Black", "first", 1.5),
-                new Orange(100, 3000, 0.5)};
+                new Orange(100, 3000, 0.5),
+                new Water(2.0)};
 
         Basket basket = new Basket(products);
 
-        double expected = 4.0;
+        double expected = 6.0;
 
 
         double actual = ShopAssistance.calculateTotalPrice(basket);

@@ -1,8 +1,5 @@
 package by.itstep.goutor.shopoopproject.model.data.container;
 
-import by.itstep.goutor.shopoopproject.model.data.Bread;
-import by.itstep.goutor.shopoopproject.model.data.Milk;
-import by.itstep.goutor.shopoopproject.model.data.Orange;
 import by.itstep.goutor.shopoopproject.model.data.Product;
 
 public class Basket {
