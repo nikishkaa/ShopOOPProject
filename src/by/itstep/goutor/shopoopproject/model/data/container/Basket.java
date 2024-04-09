@@ -2,21 +2,32 @@ package by.itstep.goutor.shopoopproject.model.data.container;
 
 import by.itstep.goutor.shopoopproject.model.data.Product;
 
+import java.util.Arrays;
+
 public class Basket {
-    public static final int DEFAULT_SIZE = 10;
     private Product[] products;
 
 
-    private int size = 0;
 
 
     public Basket() {
-        products = new Product[DEFAULT_SIZE];
+        products = new Product[0];
     }
 
     public Basket(Product[] products) {
         this.products = products;
-        size = products.length;
+    }
+
+    public void add(Product product) {
+
+    }
+
+    public void remove(Product product) {
+
+    }
+
+    public void remove(int index) {
+
     }
 
     public Product[] getProducts() {
@@ -28,10 +39,16 @@ public class Basket {
     }
 
     public int getSize() {
-        return size;
+        return products.length;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder("List of products: \n");
+
+        for (int i = 0; i < products.length; i++) {
+            builder.append(products[i]).append("\n");
+        }
+        return builder.toString();
     }
 }
